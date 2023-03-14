@@ -17,6 +17,9 @@ const PackageInstaller = NativeModules.PackageInstaller
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return PackageInstaller.multiply(a, b);
+export function install(
+  path: string,
+  packageName: string | null = null
+): Promise<boolean> {
+  return PackageInstaller.install(path, packageName);
 }
