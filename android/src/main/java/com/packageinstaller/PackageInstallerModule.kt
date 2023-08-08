@@ -57,7 +57,7 @@ class PackageInstallerModule(reactContext: ReactApplicationContext) :
 
 
      if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M) {
-       fileUri = FileProvider.getUriForFile(reactApplicationContext, BuildConfig.LIBRARY_PACKAGE_NAME + ".fileprovider",
+       fileUri = FileProvider.getUriForFile(reactApplicationContext, reactApplicationContext.packageName + ".fileprovider",
          file)
      }
 
